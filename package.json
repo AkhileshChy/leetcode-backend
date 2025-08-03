@@ -1,0 +1,16 @@
+{
+  "name": "leetcode-backend",
+  "version": "1.0.0",
+  "description": "practice project",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "type": "module",
+  "author": "Akhilesh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
