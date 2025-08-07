@@ -5,8 +5,8 @@ import morgan from 'morgan';
 import rateLimit from 'express-rate-limit';
 
 import authRoutes from './routes/auth.route.js';
-// import problemRoutes from './routes/problems.route.js';
-// import codeExecuteRoutes from './routes/codeExecute.route.js'; 
+import problemRoutes from './routes/problems.route.js';
+import codeExecuteRoutes from './routes/code.route.js'; 
 
 dotenv.config();
 const app = express();
@@ -32,8 +32,8 @@ app.use(cookieParser());
 app.use(morgan('dev'));
 
 app.use("/auth", authRoutes);
-// app.use("/problems", problemRoutes);
-// app.use("/code-execute", codeExecuteRoutes);
+app.use("/problem", problemRoutes);
+app.use("/code", codeExecuteRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
